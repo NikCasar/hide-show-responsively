@@ -20,8 +20,8 @@ body {
   margin: 0
 }
 
-.dino-wrap {
-  display: none;
+img {
+  display: block;
   width: 100%;
 }
 
@@ -53,8 +53,7 @@ body {
     }
 
     .dino,
-    .dino-wrap:last-child,
-    .dino-wrap:nth-last-child(2) {
+    .dino:last-child {
     width: 33.3333%;
     }
 }
