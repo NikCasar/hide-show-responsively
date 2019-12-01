@@ -11,7 +11,6 @@ html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
-}
 
 *, *::before, *::after {
   box-sizing: inherit;
@@ -22,7 +21,7 @@ body {
 }
 
 .dino-wrap {
-  display: block;
+  display: none;
   width: 100%;
 }
 
@@ -34,7 +33,7 @@ body {
 
   .dino-wrap {
     display: flex;
-    flex: wrap;
+    flex-wrap: wrap;
     }
 
     .dino {
@@ -42,7 +41,7 @@ body {
   }
 
 
-  .dino-wrap:last-child {
+  .dino:last-child {
     width: 100%;
   }
 }
@@ -50,15 +49,18 @@ body {
 @media only screen and (min-width: 38em) {
 
   .dino-wrap {
-    flex: nowrap;
+    flex-wrap: nowrap;
     }
 
     .dino,
-    .dino-wrap:last-child {
-
+    .dino-wrap:last-child,
+    .dino-wrap:nth-last-child(2) {
+    width: 33.3333%;
     }
 }
 
 @media only screen and (min-width: 60em) {
-
+    .dino-wrap {
+      flex-wrap: nowrap;
+    }
 }
