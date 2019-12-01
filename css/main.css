@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  margin: 0
+  margin: 0;
 }
 
 img {
@@ -29,37 +29,49 @@ img {
   margin: 0;
 }
 
+.dino:nth-child(even) {
+  display: none;
+}
+
 @media only screen and (min-width: 25em) {
 
   .dino-wrap {
     display: flex;
     flex-wrap: wrap;
-    }
-
-    .dino {
-  width: 50%;
   }
 
-
-  .dino:last-child {
-    width: 100%;
+  .dino {
+    width: 50%;
   }
+
+  .dino:nth-child(even) {
+    display: flex;
+  }
+
 }
 
 @media only screen and (min-width: 38em) {
 
   .dino-wrap {
     flex-wrap: nowrap;
-    }
+  }
 
-    .dino,
-    .dino:last-child {
+  .dino,
+  .dino:nth-child(even) {
     width: 33.3333%;
-    }
+  }
+
 }
 
 @media only screen and (min-width: 60em) {
-    .dino-wrap {
-      flex-wrap: nowrap;
-    }
+
+  .dino-wrap {
+    flex-wrap: nowrap;
+  }
+
+  .dino,
+  .dino:nth-child(even) {
+    width: 33.3333%;
+  }
+
 }
